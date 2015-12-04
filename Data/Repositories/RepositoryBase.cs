@@ -1,14 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Business.Interface;
+using Business.Interfaces;
 
 namespace Data.Repositories
 {
     public abstract class RepositoryBase<T> : IRepository<T> where T : class
     {
-        private readonly TestContext _context;
+        private readonly DataContext _context;
 
-        protected RepositoryBase(TestContext context)
+        protected RepositoryBase(DataContext context)
         {
             _context = context;
         }

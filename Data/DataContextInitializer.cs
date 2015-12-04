@@ -6,10 +6,10 @@ using Models;
 
 namespace Data
 {
-    public class TestContextInitializer : DropCreateDatabaseIfModelChanges<TestContext>
+    public class DataContextInitializer : DropCreateDatabaseIfModelChanges<DataContext>
     {
 
-        protected override void Seed(TestContext context)
+        protected override void Seed(DataContext context)
         {
             context.Customers.Add(new Customer
             {

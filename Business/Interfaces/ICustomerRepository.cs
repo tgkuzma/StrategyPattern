@@ -1,6 +1,6 @@
 ﻿using Models;
 
-namespace Business.Interface
+namespace Business.Interfaces
 {
     public interface ICustomerRepository : IRepository<Customer>
     {

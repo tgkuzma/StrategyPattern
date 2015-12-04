@@ -1,15 +1,15 @@
 ﻿using System.Data;
 using System.Linq;
-using Business.Interface;
+using Business.Interfaces;
 using Models;
 
 namespace Data.Repositories
 {
     public class SqlServerCustomerRepository : RepositoryBase<Customer>, ICustomerRepository
     {
-        private readonly TestContext _context;
+        private readonly DataContext _context;
 
-        public SqlServerCustomerRepository(TestContext context) : base(context)
+        public SqlServerCustomerRepository(DataContext context) : base(context)
         {
             _context = context;
         }

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Business.Interface
+namespace Business.Interfaces
 {
     public interface IRepository<T>
     {

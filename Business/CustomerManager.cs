@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Business.Interface;
+using Business.Interfaces;
 using Models;
 
 namespace Business

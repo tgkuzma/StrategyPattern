@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Reflection;
-using Business;
-using Business.Interface;
+using Business.Interfaces;
 using Ninject;
 
 namespace ConsoleApplication1
@@ -17,6 +16,7 @@ namespace ConsoleApplication1
             var customerManager = kernel.Get<ICustomerManager>();
             var customers = customerManager.GetAllCustomers();
             var duration = customerManager.GetCustomerDuration(customers.FirstOrDefault().Id);
+
             Console.WriteLine(duration.ToString());
             Console.ReadKey();
         }

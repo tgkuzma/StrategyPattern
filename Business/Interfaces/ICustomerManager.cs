@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Models;
 
-namespace Business.Interface
+namespace Business.Interfaces
 {
     public interface ICustomerManager
     {

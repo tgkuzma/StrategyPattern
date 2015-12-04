@@ -1,5 +1,5 @@
 ﻿using Business;
-using Business.Interface;
+using Business.Interfaces;
 using Data.Repositories;
 using Ninject.Modules;
 
