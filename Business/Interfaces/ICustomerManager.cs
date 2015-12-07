@@ -10,7 +10,6 @@ namespace Business.Interfaces
         Customer GetCustomerByName(string customerName);
         void AddCustomer(Customer customerToAdd);
         void DeleteCustomer(Customer customerToDelete);
-        void UpdateCustomerInfo(Customer customerToUpdate);
         int GetCustomerDuration(int customerId);
         int GetCustomerDuration(string customerName);
     }
