@@ -10,6 +10,11 @@ namespace Data
             Database.SetInitializer(new DataContextInitializer());
         }
 
+        //public DataContext(string connectionStringName) : base(connectionStringName)
+        //{
+        //    Database.SetInitializer(new DataContextInitializer());
+        //}
+
         public DbSet<Customer> Customers { get; set; }
 
     }

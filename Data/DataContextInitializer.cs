@@ -28,7 +28,7 @@ namespace Data
             if (initialState == ConnectionState.Closed)
                 context.Database.Connection.Open();
 
-            if (context.Database.Connection.ServerVersion == "11.00.3000")
+            if (context.Database.Connection.DataSource.Contains("localdb"))
             {
                 using (var command = context.Database.Connection.CreateCommand())
                 {

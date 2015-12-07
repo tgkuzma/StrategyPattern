@@ -12,5 +12,6 @@ namespace Business.Interfaces
         void DeleteCustomer(Customer customerToDelete);
         int GetCustomerDuration(int customerId);
         int GetCustomerDuration(string customerName);
+        void UpdateCustomer();
     }
 }

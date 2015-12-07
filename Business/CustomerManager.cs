@@ -46,6 +46,11 @@ namespace Business
             _customerRepository.SaveChanges();
         }
 
+        public void UpdateCustomer()
+        {
+            _customerRepository.SaveChanges();
+        }
+
         public int GetCustomerDuration(int customerId)
         {
             var customer = GetCustomerById(customerId);
