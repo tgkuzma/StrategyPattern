@@ -10,8 +10,8 @@ namespace ConsoleApplication1
         public override void Load()
         {
             Bind<ICustomerManager>().To<CustomerManager>();
-            //Bind<ICustomerRepository>().To<SqlServerCustomerRepository>();
-            Bind<ICustomerRepository>().To<MySqlCustomerRepository>();
+            Bind<ICustomerRepository>().To<SqlServerCustomerRepository>();
+            //Bind<ICustomerRepository>().To<MySqlCustomerRepository>();
         }
     }
 }
