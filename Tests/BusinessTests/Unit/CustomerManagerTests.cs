@@ -66,6 +66,7 @@ namespace Tests.BusinessTests.Unit
             _mockCustomerRepository.Verify(x => x.GetAll(), Times.Once);
         }
 
+
         [Test]
         public void GetCustomerById_CallsRepositoryOnce()
         {
