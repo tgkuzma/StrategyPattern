@@ -46,17 +46,13 @@ namespace Business
             _customerRepository.SaveChanges();
         }
 
-        public void UpdateCustomer()
-        {
-            _customerRepository.SaveChanges();
-        }
 
         public int GetCustomerDuration(int customerId)
         {
             var customer = GetCustomerById(customerId);
             if (customer == null)
             {
-                throw new ApplicationException(string.Format("A customer with Id {0} does not exist", customerId));
+                throw new ArgumentException(string.Format("A customer with Id {0} does not exist", customerId));
             }
 
             return _customerRepository.GetCustomerDuration(customer.CustomerName);
