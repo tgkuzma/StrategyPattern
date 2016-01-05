@@ -1,6 +1,4 @@
-﻿using Models;
-
-namespace Business.Interfaces
+﻿namespace Models.Interfaces
 {
     public interface ICustomerRepository : IRepository<Customer>
     {

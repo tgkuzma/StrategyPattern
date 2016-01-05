@@ -1,6 +1,7 @@
 ﻿using Business;
 using Business.Interfaces;
 using Data.Repositories;
+using Models.Interfaces;
 using Ninject.Modules;
 
 namespace ConsoleApplication1

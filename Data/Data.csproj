@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\CustomerRepositoryBase.cs" />
     <Compile Include="Repositories\MySqlCustomerRepository.cs" />
     <Compile Include="Repositories\SqlServerCustomerRepository.cs" />
     <Compile Include="Repositories\RepositoryBase.cs" />
@@ -69,10 +70,6 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\Business\Business.csproj">
-      <Project>{4ecd617a-7438-4572-a03e-6fffb9a2c598}</Project>
-      <Name>Business</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{9C9B7819-0A42-4705-9E86-C849E749F8BF}</Project>
       <Name>Models</Name>

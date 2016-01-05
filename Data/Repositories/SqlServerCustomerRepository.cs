@@ -1,11 +1,11 @@
 ﻿using System.Data;
 using System.Linq;
-using Business.Interfaces;
 using Models;
+using Models.Interfaces;
 
 namespace Data.Repositories
 {
-    public class SqlServerCustomerRepository : RepositoryBase<Customer>, ICustomerRepository
+    public class SqlServerCustomerRepository : CustomerRepositoryBase
     {
         private readonly DataContext _context;
 
@@ -14,12 +14,7 @@ namespace Data.Repositories
             _context = context;
         }
 
-        public Customer GetByCustomerName(string customerName)
-        {
-            return _context.Customers.FirstOrDefault(c => c.CustomerName == customerName);
-        }
-
-        public int GetCustomerDuration(string customerName)
+        public override int GetCustomerDuration(string customerName)
         {
             var connection = _context.Database.Connection;
             if(connection.State == ConnectionState.Closed)

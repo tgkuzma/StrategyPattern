@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using Business;
-using Business.Interfaces;
 using Models;
+using Models.Interfaces;
 using Moq;
 using NUnit.Framework;
 

@@ -41,8 +41,6 @@
   <ItemGroup>
     <Compile Include="CustomerManager.cs" />
     <Compile Include="Interfaces\ICustomerManager.cs" />
-    <Compile Include="Interfaces\ICustomerRepository.cs" />
-    <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

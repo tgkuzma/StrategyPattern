@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Business.Interfaces;
 
 namespace Data.Repositories
 {
-    public abstract class RepositoryBase<T> : IRepository<T> where T : class
+    public abstract class RepositoryBase<T> where T : class
     {
         private readonly DataContext _context;
 

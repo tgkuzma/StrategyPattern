@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Business.Interfaces;
 using Models;
+using Models.Interfaces;
 
 namespace Business
 {
@@ -65,6 +66,10 @@ namespace Business
 
         public int GetCustomerDuration(string customerName)
         {
+            if (string.IsNullOrEmpty(customerName))
+            {
+                throw new ArgumentException("A customerName is required.");
+            }
             return _customerRepository.GetCustomerDuration(customerName);
         }
     }
