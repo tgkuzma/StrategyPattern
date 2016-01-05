@@ -6,7 +6,7 @@ using Models;
 
 namespace Data
 {
-    public class DataContextInitializer : DropCreateDatabaseIfModelChanges<DataContext>
+    public class DataContextInitializer : DropCreateDatabaseAlways<DataContext>
     {
 
         protected override void Seed(DataContext context)

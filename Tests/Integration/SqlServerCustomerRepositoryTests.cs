@@ -4,11 +4,12 @@ using Data;
 using Data.Repositories;
 using NUnit.Framework;
 
-namespace Tests.BusinessTests.Integration
+namespace Tests.Integration
 {
-    public class MySqlCustomerRepositoryTests
+    [TestFixture]
+    public class SqlServerCustomerRepositoryTests
     {
-        private MySqlCustomerRepository _customerRepository;
+        private SqlServerCustomerRepository _customerRepository;
         private DataContext _context;
         private CustomerManager _customerManager;
 
@@ -21,7 +22,7 @@ namespace Tests.BusinessTests.Integration
         [OneTimeSetUp]
         public void InitialSetup()
         {
-            _context = new DataContext("MySqlContext");
+            _context = new DataContext("SqlServerContext");
         }
 
         /// <summary>
@@ -40,7 +41,7 @@ namespace Tests.BusinessTests.Integration
         [SetUp]
         public void SetupForEachTest()
         {
-            _customerRepository = new MySqlCustomerRepository(_context);
+            _customerRepository = new SqlServerCustomerRepository(_context);
             _customerManager = new CustomerManager(_customerRepository);
         }
 
@@ -91,6 +92,6 @@ namespace Tests.BusinessTests.Integration
             //Assert
             Assert.Greater(duration, 0);
 
-        }
+        } 
     }
 }

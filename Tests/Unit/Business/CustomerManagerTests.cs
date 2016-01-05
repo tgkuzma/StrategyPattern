@@ -6,7 +6,7 @@ using Models.Interfaces;
 using Moq;
 using NUnit.Framework;
 
-namespace Tests.BusinessTests.Unit
+namespace Tests.Unit.Business
 {
     [TestFixture]
     public class CustomerManagerTests
@@ -96,13 +96,13 @@ namespace Tests.BusinessTests.Unit
         public void GetCustomerByName_CallsRepositoryOnce()
         {
             // Arrange
-            _mockCustomerRepository.Setup(x => x.GetByCustomerName(It.IsAny<string>())).Returns(new Customer());
+            _mockCustomerRepository.Setup(x => x.GetCustomerByName(It.IsAny<string>())).Returns(new Customer());
 
             //Act
             _customerManager.GetCustomerByName("x");
 
             //Assert
-            _mockCustomerRepository.Verify(x => x.GetByCustomerName(It.IsAny<string>()), Times.Once);
+            _mockCustomerRepository.Verify(x => x.GetCustomerByName(It.IsAny<string>()), Times.Once);
         }
 
         [Test]

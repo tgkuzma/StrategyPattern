@@ -32,7 +32,7 @@ namespace Business
                 throw new ArgumentException("customerName is required.");
             }
 
-            return _customerRepository.GetByCustomerName(customerName);
+            return _customerRepository.GetCustomerByName(customerName);
         }
 
         public void AddCustomer(Customer customerToAdd)

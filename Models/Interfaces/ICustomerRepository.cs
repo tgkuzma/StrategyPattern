@@ -2,7 +2,7 @@
 {
     public interface ICustomerRepository : IRepository<Customer>
     {
-        Customer GetByCustomerName(string customerName);
+        Customer GetCustomerByName(string customerName);
         int GetCustomerDuration(string customerName);
     }
 }

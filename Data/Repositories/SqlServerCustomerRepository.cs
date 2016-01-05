@@ -1,7 +1,4 @@
 ﻿using System.Data;
-using System.Linq;
-using Models;
-using Models.Interfaces;
 
 namespace Data.Repositories
 {

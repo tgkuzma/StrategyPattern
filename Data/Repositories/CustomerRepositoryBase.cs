@@ -14,7 +14,7 @@ namespace Data.Repositories
             _context = context;
         }
 
-        public virtual Customer GetByCustomerName(string customerName)
+        public virtual Customer GetCustomerByName(string customerName)
         {
             if (string.IsNullOrEmpty(customerName))
             {
@@ -26,7 +26,7 @@ namespace Data.Repositories
 
         public virtual int GetCustomerDuration(string customerName)
         {
-            var customer = GetByCustomerName(customerName);
+            var customer = GetCustomerByName(customerName);
 
             if (customer == null)
             {
