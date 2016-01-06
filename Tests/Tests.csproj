@@ -67,6 +67,7 @@
     <Compile Include="Integration\MySqlCustomerRepositoryTests.cs" />
     <Compile Include="Integration\SqlServerCustomerRepositoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SystemDateManager.cs" />
     <Compile Include="Unit\Business\CustomerManagerTests.cs" />
     <Compile Include="Unit\Data\CustomerRepositoryBaseTests.cs" />
   </ItemGroup>

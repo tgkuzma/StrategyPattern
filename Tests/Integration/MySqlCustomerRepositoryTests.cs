@@ -91,7 +91,19 @@ namespace Tests.Integration
 
             //Assert
             Assert.Greater(duration, 0);
+        }
 
+        [Test]
+        public void GetCustomerDuration_Returns3()
+        {
+            // Arrange
+            var customer = _customerManager.GetAllCustomers().FirstOrDefault();
+
+            //Act
+            var duration = _customerManager.GetCustomerDuration(customer.CustomerName);
+
+            //Assert
+            Assert.AreEqual(3, duration);
         }
     }
 }

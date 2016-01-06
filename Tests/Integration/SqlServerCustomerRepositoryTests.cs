@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Runtime.InteropServices;
 using Business;
 using Data;
 using Data.Repositories;
@@ -90,8 +91,26 @@ namespace Tests.Integration
             var duration = _customerManager.GetCustomerDuration(customer.CustomerName);
 
             //Assert
-            Assert.Greater(duration, 0);
+            Assert.Greater(0, duration);
+        }
 
-        } 
+        [Test]
+        public void GetCustomerDuration_Returns3()
+        {
+            // Arrange
+            var customer = _customerManager.GetAllCustomers().FirstOrDefault();
+
+            //Act
+            var duration = _customerManager.GetCustomerDuration(customer.CustomerName);
+
+            //Assert
+            Assert.AreEqual(3, duration);
+        }
+
+        [Test]
+        public void XXXX()
+        {
+            SystemDateManager.SetSystemDate(12,22,1968);
+        }
     }
 }
